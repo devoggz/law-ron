@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@plugin '../hero.ts';
+
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+
+@custom-variant dark (&:is(.dark *));
+
+@font-face {
+    font-family: "Regular";
+    src: url("/fonts/SofiaPro-Regular.woff2") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Medium";
+    src: url("/fonts/SofiaPro-Medium.woff2") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SemiBold";
+    src: url("/fonts/SofiaPro-SemiBold.woff2") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bold";
+    src: url("/fonts/SofiaPro-Bold.woff2") format("opentype");
+    font-display: swap;
+}
+
+
+@theme {
+
+    --font-regular: "Regular";
+    --font-medium: "Medium";
+    --font-semibold: "SemiBold";
+    --font-bold: "Bold";
+    --color-primary: #002C3D;
+    --color-teal: #69B5B5;
+    --color-orange: #E5634A;
+    --color-dark-100: #86868b;
+    --color-dark-300: #262626;
+    --color-dark-200: #2e2e30;
+    --color-light-100: #adb5bd;
+}
+
