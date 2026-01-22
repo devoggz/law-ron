@@ -10,25 +10,26 @@ export const siteConfig = {
     },
     {
       label: "About",
-      href: "/docs",
+      href: "/",
     },
     {
-      label: "Services",
-      href: "/pricing",
+      label: "Expertise",
+      href: "/",
     },
     {
       label: "News",
-      href: "/blog",
+      href: "/",
     },
     {
       label: "Careers",
-      href: "/careers",
+      href: "/",
     },
     {
       label: "Contacts",
-      href: "/contacts",
+      href: "/",
     },
   ],
+
   navMenuItems: [
     {
       label: "Profile",

@@ -75,13 +75,18 @@ const Team: React.FC = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-white py-20">
+    <section className="relative overflow-hidden bg-white py-12">
       <div className="max-w-7xl px-6 mx-auto">
         {/* Header with Navigation */}
+        <div className="flex items-center border-b border-gray-200 mb-6">
+          <span className="inline-block px-4 py-2 text-xs text-gray-200 bg-orange ">
+            TEAM
+          </span>
+        </div>
         <div className="flex items-end justify-between mb-12">
           <div className="flex-1">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight max-w-2xl">
-              Meet the Experts Behind the Success of VirtuLaw
+            <h2 className="text-4xl lg:text-4xl font-bold text-gray-900 tracking-tight leading-tight max-w-xl">
+              Meet the Experts Behind RONN
             </h2>
           </div>
 

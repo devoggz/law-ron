@@ -6,10 +6,10 @@ const About = () => {
     <section className="relative overflow-hidden bg-white">
       <div className="max-w-7xl px-6 mx-auto py-16">
         {/* About Us Label */}
-        <div className="mb-12 border-b border-gray-200">
-          <p className="text-sm text-gray-500 uppercase tracking-wide">
-            About Us
-          </p>
+        <div className="flex items-center border-b border-gray-200 mb-6">
+          <span className="inline-block px-4 py-2 text-xs text-gray-200 bg-teal-500 ">
+            ABOUT US
+          </span>
         </div>
 
         {/* Main Content Grid */}

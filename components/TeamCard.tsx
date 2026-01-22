@@ -31,7 +31,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
 
       {/* Hover Overlay with Details */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+        <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
           {/* Name and Role */}
           <div className="mb-4">
             <div className="flex items-start justify-between mb-2">
@@ -50,9 +50,6 @@ const TeamCard: React.FC<TeamCardProps> = ({
 
           {/* Focus Areas */}
           <div className="mt-4">
-            <p className="text-xs text-white/70 mb-2 font-semibold">
-              Practice Areas
-            </p>
             <div className="flex flex-wrap gap-2">
               {focus.map((area, index) => (
                 <Chip
