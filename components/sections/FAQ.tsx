@@ -24,56 +24,53 @@ const FAQ: React.FC = () => {
       answer:
         "Our fee structure varies depending on the type of case and complexity. We offer transparent pricing and will provide a detailed breakdown during your consultation. We also offer flexible payment plans to ensure our services are accessible to those who need them.",
     },
-    {
-      key: "4",
-      question: "Can I get updates?",
-      answer:
-        "Absolutely. We believe in keeping our clients informed every step of the way. You'll receive regular updates via phone, email, or in-person meetings, depending on your preference. Our team is always available to answer your questions and address any concerns.",
-    },
-    {
-      key: "5",
-      question: "What if I need help?",
-      answer:
-        "If you need assistance at any time, our team is here for you. You can reach us by phone, email, or through our online contact form. We strive to respond to all inquiries promptly and are committed to providing the support you need throughout your case.",
-    },
   ];
 
   return (
     <section className="relative overflow-hidden bg-white py-20">
       <div className="max-w-7xl px-6 mx-auto">
+        <div className="flex items-center border-b border-gray-200 mb-6">
+          <span className="inline-block px-4 py-2 text-xs text-gray-200 bg-orange">
+            FAQ's
+          </span>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Column - Header */}
           <div>
-            <p className="text-xs uppercase tracking-wide text-gray-500 mb-4">
-              FAQs
-            </p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-              Frequently Asked Question
+            <h2 className="text-3xl lg:text-3xl font-bold tracking-tight text-primary leading-tight mb-6">
+              Frequently Asked Questions
             </h2>
             <div className="mt-8">
-              <p className="text-sm text-gray-600 mb-2">Still Need Help?</p>
-              <Link
-                href="/contact"
-                className="text-base font-semibold text-gray-900 underline hover:no-underline"
-              >
-                Contact Us
-              </Link>
+              <p className="text-sm text-gray-600 max-w-sm mb-2">
+                I am an entrepreneur Looking for legal support - From company
+                formation, protecting your ideas, compliance, estate planning,
+                dispute avoidance to divesting.
+                <br />
+                <br />
+                We are a business wanting to protect our interests - We have a
+                wide range of services and a passionate multidisciplinary team
+                ready to help you.
+              </p>
             </div>
           </div>
 
           {/* Right Column - Accordion */}
           <div>
-            <Accordion variant="light" defaultExpandedKeys={["1"]}>
+            <Accordion
+              className="shadow-sm"
+              variant="splitted"
+              defaultExpandedKeys={["1"]}
+            >
               {faqs.map((faq) => (
                 <AccordionItem
                   key={faq.key}
                   aria-label={faq.question}
                   title={
-                    <span className="text-lg font-semibold text-gray-900">
+                    <span className="text-lg font-semibold text-primary">
                       {faq.question}
                     </span>
                   }
-                  className="border-b border-gray-200 py-4"
+                  className=" py-4"
                 >
                   <p className="text-sm text-gray-600 leading-relaxed pb-4">
                     {faq.answer}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "@heroui/link";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ChevronRight } from "lucide-react";
 
 const glassButton =
   "backdrop-blur-md bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all";
@@ -18,7 +18,7 @@ const Hero = () => {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/images/hex.jpg')",
+          backgroundImage: "url('/images/nairobi-sky.jpg')",
         }}
       />
 
@@ -26,43 +26,46 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/50" />
 
       {/* Content */}
-      <div className="relative z-10 h-full flex items-end">
-        <div className="w-full px-6 pb-10 flex items-end justify-between">
+      <div className="relative z-10 h-full flex items-end md:pb-8">
+        <div className="w-full px-8 pb-10 flex items-end justify-between">
           {/* Left content */}
-          <div className="max-w-2xl text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
-              Experience Ronn.
+          <div className="max-w-2xl text-white space-y-8">
+            <h1 className="text-4xl md:text-4xl lg:text-7xl text-gray-200 font-semibold tracking-tight leading-tighter">
+              experience <span className="font-bold text-orange">RONN.</span>
               <br />
-              <span className="underline underline-offset-8">
-                Experience Law
-              </span>
+              <span className="text-teal">= experience Law</span>
             </h1>
 
-            <p className="mt-6 text-base md:text-lg text-white/80 max-w-xl">
-              Whether you need a modern legal approach, stronger representation,
-              or a firm that truly understands your case, we’re here to help you
-              move forward with confidence.
+            <p className="mt-6 md:text-lg text-white/80 max-w-2xl">
+              <span className="font-bold text-xl">
+                Do more. Achieve more. Be more. Expect more. Grow more…
+              </span>{" "}
+              <br />
+              Whether it is a transaction, dispute, project or compliance
+              matter, our lawyers work hard to give you the best results.
             </p>
 
-            <div className="mt-8 flex gap-4">
+            <div className="mt-8 flex  gap-4">
               <Link
                 href="/contact"
                 className={`
                   ${glassButton}
-                  px-6 py-2 rounded-full font-medium
+                  px-4 py-2  font-medium
                 `}
               >
-                Let’s Get Started
+                Our Expertise
+                <ChevronRight className="h-6 w-6 ml-8" />
               </Link>
 
               <Link
                 href="/about"
                 className={`
                   ${glassButton}
-                  px-6 py-2 rounded-full font-medium
+                  px-4 py-2  font-medium
                 `}
               >
                 Learn More
+                <ChevronRight className="h-6 w-6 ml-8" />
               </Link>
             </div>
           </div>
@@ -72,7 +75,7 @@ const Hero = () => {
             href="#next-section"
             className={`
               ${glassButton}
-              px-5 py-2 rounded-full font-medium
+              px-5 py-2  font-medium
               flex items-center gap-2
             `}
           >

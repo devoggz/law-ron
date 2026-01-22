@@ -1,8 +1,29 @@
-export type SiteConfig = typeof siteConfig;
+export const services = [
+  {
+    label: "Dispute Resolution",
+    slug: "dispute-resolution",
+  },
+  {
+    label: "Energy, Infrastructure & Natural Resources",
+    slug: "energy-infrastructure-natural-resources",
+  },
+  {
+    label: "Employment",
+    slug: "employment",
+  },
+  {
+    label: "Real Estate & Finance",
+    slug: "real-estate-finance",
+  },
+];
 
 export const siteConfig = {
-  name: "Experience RONN - Experience Law",
+  name: "Experience RONN – Experience Law",
   description: "RONN Law",
+
+  /* =========================
+     PRIMARY NAV (DESKTOP)
+     ========================= */
   navItems: [
     {
       label: "Home",
@@ -10,65 +31,69 @@ export const siteConfig = {
     },
     {
       label: "About",
-      href: "/",
+      href: "/about",
     },
     {
       label: "Expertise",
-      href: "/",
+      href: "#", // handled via dropdown
+    },
+    {
+      label: "Lawyers",
+      href: "/lawyers",
     },
     {
       label: "News",
-      href: "/",
+      href: "/news",
     },
     {
       label: "Careers",
-      href: "/",
+      href: "/careers",
     },
     {
       label: "Contacts",
-      href: "/",
+      href: "/contacts",
     },
   ],
 
+  /* =========================
+     MOBILE NAV (FLAT)
+     ========================= */
   navMenuItems: [
     {
-      label: "Profile",
-      href: "/profile",
+      label: "Home",
+      href: "/",
     },
     {
-      label: "Dashboard",
-      href: "/dashboard",
+      label: "About",
+      href: "/about",
     },
     {
-      label: "Projects",
-      href: "/projects",
+      label: "Lawyers",
+      href: "/lawyers",
     },
     {
-      label: "Team",
-      href: "/team",
+      label: "News",
+      href: "/news",
     },
     {
-      label: "Calendar",
-      href: "/calendar",
+      label: "Careers",
+      href: "/careers",
     },
     {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
+      label: "Contacts",
+      href: "/contacts",
     },
   ],
+
+  /* =========================
+     LINKS
+     ========================= */
   links: {
     github: "https://github.com/heroui-inc/heroui",
     twitter: "https://twitter.com/hero_ui",
     docs: "https://heroui.com",
     discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
   },
 };
+
+export type SiteConfig = typeof siteConfig;

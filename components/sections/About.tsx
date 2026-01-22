@@ -7,7 +7,7 @@ const About = () => {
       <div className="max-w-7xl px-6 mx-auto py-16">
         {/* About Us Label */}
         <div className="flex items-center border-b border-gray-200 mb-6">
-          <span className="inline-block px-4 py-2 text-xs text-gray-200 bg-teal-500 ">
+          <span className="inline-block px-4 py-2 text-xs text-gray-200 bg-teal-700 ">
             ABOUT US
           </span>
         </div>
@@ -18,8 +18,8 @@ const About = () => {
           <div></div>
 
           {/* Right Column - Main Text */}
-          <div className="">
-            <h2 className="text-4xl lg:text-2xl font-semibold leading-tight text-dark-300 mb-4">
+          <div className="mt-8">
+            <h2 className="text-4xl lg:text-2xl font-semibold leading-tight text-primary mb-4">
               We are a Kenya-based law firm with top-rated and forward-thinking
               lawyers who can help you with creative legal strategies.
             </h2>
@@ -33,7 +33,7 @@ const About = () => {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Stat 1 */}
-          <div className="flex flex-col items-center border border-gray-200 rounded-tr-full rounded-br-full  bg-orange p-8 hover:border-gray-300 transition-colors">
+          <div className="flex flex-col border-4 border-teal-600 rounded-tr-full rounded-br-full   p-8 hover:border-orange transition-colors">
             <div className="mb-4 ">
               <h3 className="text-5xl font-bold text-gray-900">50+</h3>
             </div>
@@ -41,7 +41,7 @@ const About = () => {
           </div>
 
           {/* Stat 2 */}
-          <div className="flex flex-col items-center border border-gray-200 rounded-bl-full rounded-tr-full p-8 hover:border-gray-300 bg-teal-700 transition-colors">
+          <div className="flex flex-col items-center border-4 border-orange  rounded-bl-full rounded-tr-full p-8 hover:border-teal-600 transition-colors">
             <div className="mb-4">
               <h3 className="text-5xl font-bold text-orange">20,000+</h3>
             </div>
@@ -49,7 +49,7 @@ const About = () => {
           </div>
 
           {/* Stat 3 */}
-          <div className="flex flex-col items-center border border-gray-200 p-8 hover:border-gray-300 bg-primary rounded-bl-full  transition-colors">
+          <div className="flex flex-col items-center border-4 border-primary  p-8 hover:border-gray-300  rounded-bl-full  transition-colors">
             <div className="mb-4">
               <h3 className="text-5xl font-bold text-orange">10+</h3>
             </div>
