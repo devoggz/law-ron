@@ -42,8 +42,10 @@ export default function PartnerProfileLayout({
             <h1 className="text-4xl lg:text-6xl font-bold text-white">
               {partner.name}
             </h1>
+            <p className="mt-2 text-white/80 font-semibold text-lg lg:text-base">
+              {partner.title}
+            </p>
             <p className="mt-2 text-white/80 text-sm lg:text-base">
-              <span className="font-semibold">{partner.title}</span> ·{" "}
               {partner.practice}
             </p>
           </div>
@@ -111,7 +113,7 @@ export default function PartnerProfileLayout({
             className="object-cover"
           />
 
-          <div className="bg-gray-50 p-4 space-y-2 text-sm">
+          <div className="bg-gray-50 p-4 space-y-2 text-sm font-bold text-primary">
             <p>
               <strong>E:</strong> {partner.email}
             </p>
