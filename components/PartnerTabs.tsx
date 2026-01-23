@@ -34,7 +34,7 @@ export default function PartnerTabs({ partner }: PartnerTabsProps) {
       classNames={{ panel: "pt-8" }}
     >
       <Tab key="bio" title="Bio">
-        <div className="prose font-regular space-y-4 max-w-none">
+        <div className="prose whitespace-pre-line font-regular space-y-4 max-w-none">
           {partner.bio.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
