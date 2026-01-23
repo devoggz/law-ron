@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Download, ChevronRight, ChevronLeft }from "lucide-react";
-
+import { ChevronLeft, ChevronRight, Download } from "lucide-react";
 import { Button } from "@heroui/button";
 import React from "react";
 import { partners } from "@/app/data/data";
@@ -24,7 +23,7 @@ export default function PartnerProfileLayout({
   return (
     <section className="w-full">
       {/* HERO */}
-      <div className="relative rounded-sm w-full h-[30vh] lg:h-[30vh] overflow-hidden">
+      <div className="relative w-full h-[20vh] lg:h-[30vh] overflow-hidden">
         <Image
           src={partner.coverImage || partner.image}
           alt={`${partner.name} cover`}
@@ -60,7 +59,7 @@ export default function PartnerProfileLayout({
                 href={`/team/${previousPartner.slug}`}
                 className="group flex items-center gap-2 text-sm font-medium opacity-80 hover:opacity-100 transition"
               >
-                <span className="group-hover:-translate-x-1 transition-                
+                <span className="group-hover:-translate-x-1 transition-transform">
                   <ChevronLeft />
                 </span>
                 {previousPartner.name}
@@ -77,7 +76,7 @@ export default function PartnerProfileLayout({
               >
                 {nextPartner.name}
                 <span className="group-hover:translate-x-1 transition-transform">
-                  <ChevronRight/>
+                  <ChevronRight />
                 </span>
               </Link>
             ) : (
@@ -111,7 +110,7 @@ export default function PartnerProfileLayout({
             >
               {nextPartner.name}
               <span className="group-hover:translate-x-1 transition-transform">
-                <ChevronRight/>
+                <ChevronRight />
               </span>
             </Link>
           ) : (
@@ -129,15 +128,15 @@ export default function PartnerProfileLayout({
             alt={partner.name}
             width={400}
             height={500}
-            className="object-cover rounded-sm"
+            className="object-cover"
           />
 
           <div className="bg-gray-50 p-4 space-y-6 text-sm font-medium text-primary">
             <p>
-              <strong>Email:</strong> {partner.email}
+              <strong>E:</strong> {partner.email}
             </p>
             <p>
-              <strong>Mobile:</strong> {partner.mobile}
+              <strong>M:</strong> {partner.mobile}
             </p>
             <p>
               <strong>Focus:</strong> {partner.focus}

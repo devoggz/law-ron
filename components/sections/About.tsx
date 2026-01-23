@@ -48,7 +48,11 @@ const About = () => {
         className="max-w-7xl mx-auto py-16 lg:py-28"
       >
         {/* ABOUT US label */}
-      
+        <motion.div variants={itemVariants} className="flex items-center mb-10">
+          <span className="inline-block px-4 py-2 text-xs text-white bg-teal-700 rounded-tr-full rounded-br-full font-medium tracking-wide">
+            ABOUT US
+          </span>
+        </motion.div>
 
         {/* Two-column layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
