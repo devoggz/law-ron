@@ -4,6 +4,8 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { LogoTicker } from "@/components/sections";
+import { ChevronRight } from "lucide-react";
+import { Link } from "@heroui/link";
 
 const About = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -52,6 +54,10 @@ const About = () => {
               We work with private clients, start-ups, medium-sized businesses,
               large local and multinational companies.
             </p>
+            <Link href="/about" className="px-4 py-2 font-medium text-primary">
+              Experience More
+              <ChevronRight className="h-6 w-6 ml-8" />
+            </Link>
           </motion.div>
 
           {/* Right: Image with parallax */}
@@ -72,7 +78,6 @@ const About = () => {
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-black/10" />
             </motion.div>
           </motion.div>
         </div>
