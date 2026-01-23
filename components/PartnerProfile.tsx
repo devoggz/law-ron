@@ -23,7 +23,7 @@ export default function PartnerProfileLayout({
   return (
     <section className="w-full">
       {/* HERO */}
-      <div className="relative w-full h-[20vh] lg:h-[30vh] overflow-hidden">
+      <div className="relative w-full h-[30vh] lg:h-[30vh] overflow-hidden">
         <Image
           src={partner.coverImage || partner.image}
           alt={`${partner.name} cover`}
@@ -52,7 +52,7 @@ export default function PartnerProfileLayout({
 
         {/* DESKTOP NAVIGATION – bottom pinned */}
         <div className="hidden lg:block absolute bottom-0 left-0 right-0 z-20">
-          <div className="max-w-7xl mx-auto px-6 pb-6 flex items-center justify-between text-white">
+          <div className="max-w-7xl mx-auto px-2 pb-6 flex items-center justify-between text-white">
             {/* Previous */}
             {previousPartner ? (
               <Link

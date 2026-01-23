@@ -63,7 +63,7 @@ export default function ServiceProfileLayout({
 
         {/* Desktop Navigation – bottom pinned */}
         <div className="hidden lg:block absolute bottom-0 left-0 right-0 z-20">
-          <div className="max-w-7xl mx-auto px-6 pb-6 flex items-center justify-between text-white">
+          <div className="max-w-7xl mx-auto px-2 pb-6 flex items-center justify-between text-white">
             {/* Previous */}
             {previousService ? (
               <Link
