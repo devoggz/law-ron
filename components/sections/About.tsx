@@ -109,12 +109,6 @@ const About = () => {
 
         {/* OUR CLIENTS */}
         <motion.div variants={itemVariants} className="mt-20">
-          <div className="flex items-center mb-6">
-            <span className="inline-block px-4 py-2 text-xs text-white bg-orange-500 rounded-tr-full rounded-br-full font-medium tracking-wide">
-              OUR CLIENTS
-            </span>
-          </div>
-
           <LogoTicker />
         </motion.div>
       </motion.div>

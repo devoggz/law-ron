@@ -101,9 +101,10 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
             custom={0.45}
+            className="hidden md:flex"
           >
             <Link
-              href="#next-section"
+              href="#"
               className={`${glassButton} px-5 py-2 font-medium flex items-center gap-2`}
             >
               Scroll Down
