@@ -37,7 +37,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <section className="w-full ">
+    <section className="w-full">
       {/* HERO SECTION */}
       <div className="relative w-full h-[20vh] lg:h-[20vh] overflow-hidden">
         <Image
@@ -57,22 +57,38 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* INTRO SECTION */}
+      {/* INTRO SECTION — IMAGE LEFT, TEXT RIGHT */}
       <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <p className="text-lg lg:text-xl text-primary font-regular leading-relaxed">
-            We are a Kenya-based law firm with top-rated and forward-thinking
-            lawyers who can help you with creative legal strategies. We work
-            with private clients, start-ups, medium-sized businesses, large
-            local and multinational companies. When you work with us, you get
-            more than just good lawyers.
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+          {/* LEFT IMAGE */}
+          <div className="relative w-full h-[350px] lg:h-auto overflow-hidden">
+            <Image
+              src="/images/nairobi.jpg"
+              alt="Nairobi City"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          {/* RIGHT CONTENT */}
+          <div className="flex items-center">
+            <div className="space-y-6">
+              <p className="text-lg lg:text-xl text-primary font-regular leading-relaxed">
+                We are a Kenya-based law firm with top-rated and
+                forward-thinking lawyers who can help you with creative legal
+                strategies. We work with private clients, start-ups,
+                medium-sized businesses, large local and multinational
+                companies. When you work with us, you get more than just good
+                lawyers.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* THE "MORE" SECTION */}
-      <div className=" py-12">
-        <div className="max-w-7xl mx-auto ">
+      <div className="py-12">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-4">
               What Makes Us Different

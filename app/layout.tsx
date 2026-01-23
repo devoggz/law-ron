@@ -8,6 +8,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/sections";
+import React from "react";
 
 export const metadata: Metadata = {
   title: {
@@ -40,24 +41,13 @@ export default function RootLayout({
           "min-h-screen text-foreground bg-background font-sans antialiased",
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
             <main className="container mx-auto max-w-7xl px-6 flex-grow">
               {children}
             </main>
             <Footer />
-            {/*<footer className="w-full flex items-center justify-center py-3">*/}
-            {/*  <Link*/}
-            {/*    isExternal*/}
-            {/*    className="flex items-center gap-1 text-current"*/}
-            {/*    href="https://heroui.com?utm_source=next-app-template"*/}
-            {/*    title="heroui.com homepage"*/}
-            {/*  >*/}
-            {/*    <span className="text-default-600">Cooked by</span>*/}
-            {/*    <p className="text-primary">KalaWaks</p>*/}
-            {/*  </Link>*/}
-            {/*</footer>*/}
           </div>
         </Providers>
       </body>

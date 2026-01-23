@@ -1,21 +1,30 @@
-// components/PartnerProfileLayout.tsx
+"use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Download } from "lucide-react";
 import { Button } from "@heroui/button";
 import React from "react";
+import { partners } from "@/app/data/data";
 
-export default function PartnerProfile({
+export default function PartnerProfileLayout({
   partner,
   children,
 }: {
   partner: any;
   children: React.ReactNode;
 }) {
+  const currentIndex = partners.findIndex((p) => p.slug === partner.slug);
+
+  const previousPartner = currentIndex > 0 ? partners[currentIndex - 1] : null;
+
+  const nextPartner =
+    currentIndex < partners.length - 1 ? partners[currentIndex + 1] : null;
+
   return (
     <section className="w-full">
-      {/* HERO SECTION */}
-      <div className="relative w-full h-[40vh] lg:h-[20vh] overflow-hidden">
+      {/* HERO */}
+      <div className="relative w-full h-[20vh] lg:h-[30vh] overflow-hidden">
         <Image
           src={partner.coverImage || partner.image}
           alt={`${partner.name} cover`}
@@ -23,53 +32,87 @@ export default function PartnerProfile({
           className="object-cover"
           priority
         />
+
+        {/* Overlay */}
         <div className="absolute inset-0 bg-black/60" />
 
-        <div className="relative z-10 h-full flex items-center justify-center text-center ">
+        {/* Title */}
+        <div className="relative z-10 flex items-center justify-center h-full text-center pointer-events-none">
           <div>
-            <div className="absolute bottom-6 left-6 lg:text-left">
-              <h2 className="text-4xl font-bold text-gray-200">
-                {partner.name}
-              </h2>
-              <p className="text-gray-200">
-                <span className="font-bold">{partner.title} </span> |{" "}
-                {partner.practice}{" "}
-              </p>
-              <p className="text-sm mt-1 text-gray-500"></p>
-            </div>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white">
+              {partner.name}
+            </h1>
+            <p className="mt-2 text-white/80 text-sm lg:text-base">
+              <span className="font-semibold">{partner.title}</span> ·{" "}
+              {partner.practice}
+            </p>
           </div>
+        </div>
+
+        {/* CV DOWNLOAD */}
+        {partner.cvUrl && (
           <Button
             as="a"
-            radius="none"
             href={partner.cvUrl}
             download
-            className="absolute bottom-4 right-4 flex items-center gap-2 bg-orange/80 text-white backdrop-blur-md hover:bg-teal"
+            radius="none"
+            className="absolute top-6 right-6 z-20 bg-orange/80 text-white backdrop-blur hover:bg-teal"
           >
-            <Download size={16} />
+            <Download size={16} className="mr-2" />
             Download CV
           </Button>
+        )}
+
+        {/* NAVIGATION – bottom pinned (same logic as services) */}
+        <div className="absolute bottom-0 left-0 right-0 z-20">
+          <div className="max-w-7xl mx-auto px-6 pb-6 flex items-center justify-between text-white">
+            {/* Previous */}
+            {previousPartner ? (
+              <Link
+                href={`/team/${previousPartner.slug}`}
+                className="group flex items-center gap-2 text-sm font-medium opacity-80 hover:opacity-100 transition"
+              >
+                <span className="group-hover:-translate-x-1 transition-transform">
+                  ←
+                </span>
+                {previousPartner.name}
+              </Link>
+            ) : (
+              <span />
+            )}
+
+            {/* Next */}
+            {nextPartner ? (
+              <Link
+                href={`/team/${nextPartner.slug}`}
+                className="group flex items-center gap-2 text-sm font-medium opacity-80 hover:opacity-100 transition"
+              >
+                {nextPartner.name}
+                <span className="group-hover:translate-x-1 transition-transform">
+                  →
+                </span>
+              </Link>
+            ) : (
+              <span />
+            )}
+          </div>
         </div>
       </div>
 
       {/* CONTENT */}
-      <div className="max-w-7xl mx-auto py-16 grid grid-cols-1 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-4 gap-12">
         {/* LEFT COLUMN */}
         <aside className="lg:col-span-1 space-y-6">
-          {/* IMAGE + DOWNLOAD */}
-          <div className="relative  overflow-hidden">
-            <Image
-              src={partner.image}
-              alt={partner.name}
-              width={400}
-              height={300}
-              className="object-cover"
-            />
+          <Image
+            src={partner.image}
+            alt={partner.name}
+            width={400}
+            height={500}
+            className="object-cover"
+          />
 
-            {/* DOWNLOAD BUTTON */}
-          </div>
-
-          <div className="text-sm space-y-2 font-medium">
-            <p className="">
+          <div className="bg-gray-50 p-4 space-y-2 text-sm">
+            <p>
               <strong>E:</strong> {partner.email}
             </p>
             <p>
@@ -82,7 +125,7 @@ export default function PartnerProfile({
         </aside>
 
         {/* RIGHT COLUMN */}
-        <div className="lg:col-span-3">{children}</div>
+        <div className="lg:col-span-3 space-y-12">{children}</div>
       </div>
     </section>
   );
