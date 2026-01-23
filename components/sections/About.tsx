@@ -1,49 +1,85 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import Image from "next/image";
-import { LogoTicker } from "@/components/sections/index";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { LogoTicker } from "@/components/sections";
 
 const About = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  // Trigger reveal only once when scrolled into view
+  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+
+  // Parallax for image
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const imageY = useTransform(scrollYProgress, [0, 1], ["-6%", "6%"]);
+
   return (
-    <section className="relative overflow-hidden bg-white">
-      <div className="max-w-7xl mx-auto py-12 lg:py-24">
-        {/* About Us Label */}
-        <div className="flex items-center mb-8">
+    <section ref={sectionRef} className="relative overflow-hidden bg-white">
+      <div className="max-w-7xl mx-auto px-6 py-16 lg:py-28">
+        {/* ABOUT US label */}
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex items-center mb-10"
+        >
           <span className="inline-block px-4 py-2 text-xs text-white bg-teal-700 rounded-tr-full rounded-br-full font-medium tracking-wide">
             ABOUT US
           </span>
-        </div>
+        </motion.div>
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-6 gap-12 lg:gap-16 mb-12">
-          {/* Left Column – Image */}
-          <div className="lg:col-span-7 p-3 space-y-6">
+        {/* Two-column layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Left: Text */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+            className="lg:col-span-6 space-y-6"
+          >
             <h2 className="text-3xl lg:text-4xl font-bold leading-tight text-primary">
               We are a Kenya-based law firm with top-rated and forward-thinking
               lawyers who can help you with creative legal strategies.
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+
+            <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
               We work with private clients, start-ups, medium-sized businesses,
               large local and multinational companies.
             </p>
-          </div>
+          </motion.div>
+
+          {/* Right: Image with parallax */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="lg:col-span-6 flex justify-end"
+          >
+            <motion.div
+              style={{ y: imageY }}
+              className="relative w-[360px] h-[360px] lg:w-[420px] lg:h-[420px] overflow-hidden"
+            >
+              <Image
+                src="/images/blob.png"
+                alt="Nairobi skyline"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-black/10" />
+            </motion.div>
+          </motion.div>
         </div>
 
-        {/* Right Column – Main Text */}
-        <div className="hidden lg:block lg:col-span-6 relative">
-          <div className="relative h-full min-h-[420px] w-full overflow-hidden">
-            <Image
-              src="/images/blob.png"
-              alt="Nairobi skyline"
-              width={384}
-              height={384}
-              className="object-cover"
-              priority
-            />
-            {/* Subtle overlay for polish */}
-            <div className="absolute inset-0 bg-black/10" />
-          </div>
+        <div className="mt-20">
+          <LogoTicker />
         </div>
-        <LogoTicker />
       </div>
     </section>
   );
