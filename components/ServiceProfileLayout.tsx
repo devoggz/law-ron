@@ -98,7 +98,7 @@ export default function ServiceProfileLayout({
       </div>
 
       {/* Mobile Navigation – below hero */}
-      <div className="lg:hidden bg-orange py-4">
+      <div className="lg:hidden bg-teal py-4">
         <div className="max-w-7xl mx-auto px-2 flex items-center justify-between text-primary">
           {previousService ? (
             <Link
@@ -131,7 +131,7 @@ export default function ServiceProfileLayout({
       </div>
 
       {/* CONTENT SECTION */}
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto  py-16 grid grid-cols-1 lg:grid-cols-4 gap-12">
         {/* LEFT COLUMN – Key Contact */}
         <aside className="lg:col-span-1 space-y-6 order-last lg:order-first">
           <Image
@@ -149,10 +149,10 @@ export default function ServiceProfileLayout({
               {service.keyContact.name}
             </p>
             <p className="font-regular text-primary text-md">
-              E: {service.keyContact.email}
+              Email: {service.keyContact.email}
             </p>
             <p className="font-regular text-primary text-md">
-              M: {service.keyContact.mobile}
+              Mobile: {service.keyContact.mobile}
             </p>
           </div>
         </aside>
@@ -169,7 +169,9 @@ export default function ServiceProfileLayout({
 
           {/* Experience */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">Lawyers Experience</h2>
+            <h2 className="text-2xl font-semibold text-orange mb-4">
+              Lawyers Experience
+            </h2>
             <div className="space-y-6">
               {service.experience.map((exp, index) => (
                 <div key={index} className="border-l-4 border-teal pl-4">
