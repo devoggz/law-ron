@@ -26,7 +26,7 @@ const fadeUp: Variants = {
 
 const Hero = () => {
   return (
-    <section className="relative h-[686px] overflow-hidden">
+    <section className="relative h-[400px] md:h-[500px] lg:h-[686px] overflow-hidden">
       {/* Background Image – slow infinite zoom */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
