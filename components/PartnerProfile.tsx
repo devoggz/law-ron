@@ -61,7 +61,7 @@ export default function PartnerProfileLayout({
                 className="group flex items-center gap-2 text-sm font-medium opacity-80 hover:opacity-100 transition"
               >
                 <span className="group-hover:-translate-x-1 transition-                
-  <ChevronLeft/>
+                  <ChevronLeft />
                 </span>
                 {previousPartner.name}
               </Link>
