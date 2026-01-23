@@ -14,7 +14,7 @@ const About = () => {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-12 lg:gap-16 mb-12">
           {/* Left Column – Image */}
           <div className="lg:col-span-7 p-3 space-y-6">
             <h2 className="text-3xl lg:text-4xl font-bold leading-tight text-primary">
@@ -29,12 +29,13 @@ const About = () => {
         </div>
 
         {/* Right Column – Main Text */}
-        <div className="hidden lg:block lg:col-span-5 relative">
+        <div className="hidden lg:block lg:col-span-6 relative">
           <div className="relative h-full min-h-[420px] w-full overflow-hidden">
             <Image
               src="/images/blob.png"
               alt="Nairobi skyline"
-              fill
+              width={384}
+              height={384}
               className="object-cover"
               priority
             />
