@@ -98,8 +98,8 @@ export default function ServiceProfileLayout({
       </div>
 
       {/* Mobile Navigation – below hero */}
-      <div className="lg:hidden bg-gray-100 py-4">
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between text-gray-800">
+      <div className="lg:hidden bg-orange py-4">
+        <div className="max-w-7xl mx-auto px-2 flex items-center justify-between text-primary">
           {previousService ? (
             <Link
               href={`/services/${previousService.slug}`}
