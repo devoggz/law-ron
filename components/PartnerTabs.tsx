@@ -28,7 +28,7 @@ export default function PartnerTabs({ partner }: PartnerTabsProps) {
     <Tabs
       fullWidth
       color="primary"
-      radius="none"
+      radius="sm"
       aria-label="Partner profile"
       variant="solid"
       classNames={{ panel: "pt-8" }}
