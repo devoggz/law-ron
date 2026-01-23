@@ -23,7 +23,7 @@ export default function PartnerProfileLayout({
   return (
     <section className="w-full">
       {/* HERO */}
-      <div className="relative w-full h-[30vh] lg:h-[30vh] overflow-hidden">
+      <div className="relative rounded-sm w-full h-[30vh] lg:h-[30vh] overflow-hidden">
         <Image
           src={partner.coverImage || partner.image}
           alt={`${partner.name} cover`}
