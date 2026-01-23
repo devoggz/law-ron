@@ -90,7 +90,7 @@ const About = () => {
           {/* Right: Image */}
           <motion.div
             variants={itemVariants}
-            className="lg:col-span-6 flex justify-end"
+            className="hidden lg:flex lg:col-span-6 justify-end"
           >
             <motion.div
               style={{ y: imageY }}
