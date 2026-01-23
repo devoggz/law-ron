@@ -119,9 +119,8 @@ export const Navbar = () => {
           className="flex items-center gap-4 basis-1/4"
         >
           {/* Hamburger - visible on mobile and tablet */}
-          <div className="lg:hidden">
-            <NavbarMenuToggle />
-          </div>
+
+          <NavbarMenuToggle className="lg:hidden" />
 
           {/* Let's Talk - only visible on desktop */}
           <NavbarItem className="hidden lg:flex">

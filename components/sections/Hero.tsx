@@ -52,7 +52,7 @@ const Hero = () => {
           {/* Left content */}
           <div className="max-w-2xl text-white space-y-8">
             <motion.h1
-              className="text-5xl md:text-5xl lg:text-7xl text-gray-200 font-semibold tracking-tight leading-tighter"
+              className="text-4xl md:text-5xl lg:text-7xl text-gray-200 font-semibold tracking-tight leading-tighter"
               variants={fadeUp}
               initial="hidden"
               animate="visible"

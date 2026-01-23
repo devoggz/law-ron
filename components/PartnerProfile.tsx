@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Download } from "lucide-react";
+import { ChevronLeft, ChevronRight, Download } from "lucide-react";
 import { Button } from "@heroui/button";
 import React from "react";
 import { partners } from "@/app/data/data";
@@ -60,7 +60,7 @@ export default function PartnerProfileLayout({
                 className="group flex items-center gap-2 text-sm font-medium opacity-80 hover:opacity-100 transition"
               >
                 <span className="group-hover:-translate-x-1 transition-transform">
-                  ←
+                  <ChevronLeft />
                 </span>
                 {previousPartner.name}
               </Link>
@@ -76,7 +76,7 @@ export default function PartnerProfileLayout({
               >
                 {nextPartner.name}
                 <span className="group-hover:translate-x-1 transition-transform">
-                  →
+                  <ChevronRight />
                 </span>
               </Link>
             ) : (
@@ -95,7 +95,7 @@ export default function PartnerProfileLayout({
               className="group flex items-center gap-2 text-sm font-medium opacity-80 hover:opacity-100 transition"
             >
               <span className="group-hover:-translate-x-1 transition-transform">
-                ←
+                <ChevronLeft />
               </span>
               {previousPartner.name}
             </Link>
@@ -110,7 +110,7 @@ export default function PartnerProfileLayout({
             >
               {nextPartner.name}
               <span className="group-hover:translate-x-1 transition-transform">
-                →
+                <ChevronRight />
               </span>
             </Link>
           ) : (

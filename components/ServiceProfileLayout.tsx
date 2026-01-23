@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { services } from "@/app/data/services";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Experience {
   name: string;
@@ -70,7 +71,7 @@ export default function ServiceProfileLayout({
                 className="group flex items-center gap-2 text-sm font-medium opacity-80 hover:opacity-100 transition"
               >
                 <span className="group-hover:-translate-x-1 transition-transform">
-                  ←
+                  <ChevronLeft />
                 </span>
                 {previousService.name}
               </Link>
@@ -86,7 +87,7 @@ export default function ServiceProfileLayout({
               >
                 {nextService.name}
                 <span className="group-hover:translate-x-1 transition-transform">
-                  →
+                  <ChevronRight />
                 </span>
               </Link>
             ) : (
@@ -105,7 +106,7 @@ export default function ServiceProfileLayout({
               className="group flex items-center gap-2 text-sm font-medium opacity-80 hover:opacity-100 transition"
             >
               <span className="group-hover:-translate-x-1 transition-transform">
-                ←
+                <ChevronLeft />
               </span>
               {previousService.name}
             </Link>
@@ -120,7 +121,7 @@ export default function ServiceProfileLayout({
             >
               {nextService.name}
               <span className="group-hover:translate-x-1 transition-transform">
-                →
+                <ChevronRight />
               </span>
             </Link>
           ) : (
