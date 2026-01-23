@@ -32,7 +32,7 @@ const About = () => {
         <div className="hidden lg:block lg:col-span-5 relative">
           <div className="relative h-full min-h-[420px] w-full overflow-hidden">
             <Image
-              src="/images/nairobi.jpg"
+              src="/images/blob.png"
               alt="Nairobi skyline"
               fill
               className="object-cover"
