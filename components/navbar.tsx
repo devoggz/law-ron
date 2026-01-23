@@ -134,12 +134,7 @@ export const Navbar = () => {
               Let's Talk
             </Button>
 
-            <Modal
-              isOpen={isOpen}
-              placement="center"
-              onOpenChange={onOpenChange}
-              size="lg"
-            >
+            <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="lg">
               <ModalContent>
                 {() => (
                   <ModalBody className="pb-6">
