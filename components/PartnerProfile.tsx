@@ -133,10 +133,10 @@ export default function PartnerProfileLayout({
 
           <div className="bg-gray-50 p-4 space-y-6 text-sm font-medium text-primary">
             <p>
-              <strong>E:</strong> {partner.email}
+              <strong>Email:</strong> {partner.email}
             </p>
             <p>
-              <strong>M:</strong> {partner.mobile}
+              <strong>Mobile:</strong> {partner.mobile}
             </p>
             <p>
               <strong>Focus:</strong> {partner.focus}
