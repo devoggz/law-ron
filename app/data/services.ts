@@ -196,6 +196,75 @@ export const services: Service[] = [
     },
   },
   {
+    slug: "real-estate-finance",
+    name: "Real Estate & Finance",
+    image: "/images/real-estate.jpg",
+    overview: `We help with real estate purchase, sale, financing, and high-value financing transactions. Our lawyers have acted for commercial banks and private clients in property acquisition, project development, construction, leasing, logistics, land use, telecommunications base stations, and security transactions.`,
+    experience: [
+      {
+        name: "UBS Foundation",
+        description:
+          "Social impact loans to entities in Kenya including due diligence and review of loan agreements.",
+      },
+      {
+        name: "I&M Bank Limited",
+        description:
+          "Lending over USD 20 million to local borrower including security structure and principal documentation.",
+      },
+      {
+        name: "Various local banks",
+        description:
+          "Preparation and registration of securities including NCBA, Standard Chartered, and Stanbic.",
+      },
+      {
+        name: "Leading pan-African property company",
+        description:
+          "Purchase of property through shares in property holding company valued at USD 32 million; sale and leaseback advisory.",
+      },
+      {
+        name: "Private owner",
+        description:
+          "Sale of land in Nairobi valued over KES 1 billion for new offices for International Committee of Red Cross.",
+      },
+      {
+        name: "Commercial Leasing",
+        description:
+          "Negotiation, drafting, and registration of commercial leases including Yaya Centre and The Pavilion.",
+      },
+      {
+        name: "Telecom Companies",
+        description:
+          "Acquisition, negotiation, drafting, and registration of commercial leases for base transceiver and broadcasting sites including Safaricom and GOtv.",
+      },
+      {
+        name: "Leading private developer",
+        description:
+          "Purchase of properties in Nairobi including sale agreement, structuring, regulatory approvals, and construction agreements.",
+      },
+      {
+        name: "Copia Kenya",
+        description:
+          "Lease of warehouse premises in Tatu City; transaction structuring and terms negotiation.",
+      },
+      {
+        name: "Freight Forwarders Solutions Ltd",
+        description:
+          "Lease of warehouse premises in Tatu City including transaction structuring and terms negotiation.",
+      },
+      {
+        name: "American private equity fund",
+        description:
+          "Drafting commercial lease in Eldama Park, due diligence and negotiation of terms.",
+      },
+    ],
+    keyContact: {
+      name: "Muthoni Runji-Pertet",
+      image: "/images/muthoni.jpeg",
+      email: "muthoni.runji@ronn.law",
+      mobile: "+254 722 639 739",
+    },
+  },
+  {
     slug: "energy-infrastructure-natural-resources",
     name: "Energy, Infrastructure & Natural Resources",
     image: "/images/energy.jpg",
@@ -274,75 +343,6 @@ export const services: Service[] = [
       image: "/images/njau.jpeg",
       email: "njau.mukua@ronn.law",
       mobile: "+254 721 683 882",
-    },
-  },
-  {
-    slug: "real-estate-finance",
-    name: "Real Estate & Finance",
-    image: "/images/real-estate.jpg",
-    overview: `We help with real estate purchase, sale, financing, and high-value financing transactions. Our lawyers have acted for commercial banks and private clients in property acquisition, project development, construction, leasing, logistics, land use, telecommunications base stations, and security transactions.`,
-    experience: [
-      {
-        name: "UBS Foundation",
-        description:
-          "Social impact loans to entities in Kenya including due diligence and review of loan agreements.",
-      },
-      {
-        name: "I&M Bank Limited",
-        description:
-          "Lending over USD 20 million to local borrower including security structure and principal documentation.",
-      },
-      {
-        name: "Various local banks",
-        description:
-          "Preparation and registration of securities including NCBA, Standard Chartered, and Stanbic.",
-      },
-      {
-        name: "Leading pan-African property company",
-        description:
-          "Purchase of property through shares in property holding company valued at USD 32 million; sale and leaseback advisory.",
-      },
-      {
-        name: "Private owner",
-        description:
-          "Sale of land in Nairobi valued over KES 1 billion for new offices for International Committee of Red Cross.",
-      },
-      {
-        name: "Commercial Leasing",
-        description:
-          "Negotiation, drafting, and registration of commercial leases including Yaya Centre and The Pavilion.",
-      },
-      {
-        name: "Telecom Companies",
-        description:
-          "Acquisition, negotiation, drafting, and registration of commercial leases for base transceiver and broadcasting sites including Safaricom and GOtv.",
-      },
-      {
-        name: "Leading private developer",
-        description:
-          "Purchase of properties in Nairobi including sale agreement, structuring, regulatory approvals, and construction agreements.",
-      },
-      {
-        name: "Copia Kenya",
-        description:
-          "Lease of warehouse premises in Tatu City; transaction structuring and terms negotiation.",
-      },
-      {
-        name: "Freight Forwarders Solutions Ltd",
-        description:
-          "Lease of warehouse premises in Tatu City including transaction structuring and terms negotiation.",
-      },
-      {
-        name: "American private equity fund",
-        description:
-          "Drafting commercial lease in Eldama Park, due diligence and negotiation of terms.",
-      },
-    ],
-    keyContact: {
-      name: "Muthoni Runji-Pertet",
-      image: "/images/muthoni.jpeg",
-      email: "muthoni.runji@ronn.law",
-      mobile: "+254 722 639 739",
     },
   },
 ];
