@@ -43,7 +43,7 @@ export default function PartnerTabs({ partner }: PartnerTabsProps) {
         <div className="space-y-4 max-h-[500px] overflow-y-auto pr-4">
           {partner.experience.map((item, index) => (
             <div key={index} className="space-y-1">
-              <p className="font-semibold">• {item.name}</p>
+              <p className="font-semibold"> {item.name}</p>
               <small className="text-gray-600">{item.description}</small>
             </div>
           ))}
