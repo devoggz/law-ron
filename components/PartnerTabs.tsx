@@ -9,7 +9,7 @@ interface PartnerExperience {
 
 interface PartnerTabsProps {
   partner: {
-    bio: string[];
+    bio: string[]; 
     experience: PartnerExperience[];
     recognition: {
       title: string;
@@ -34,11 +34,9 @@ export default function PartnerTabs({ partner }: PartnerTabsProps) {
       classNames={{ panel: "pt-8" }}
     >
       <Tab key="bio" title="Bio">
-        <div className="prose max-w-none prose-p:mt-0 prose-p:mb-4 font-regular space-y-4">
+        <div className="prose max-w-none prose-p:mt-0 prose-p:mb-4 font-regular space-y-4 max-w-none">
           {partner.bio.map((paragraph, index) => (
-            <p className="font-regular text-sm" key={index}>
-              {paragraph}
-            </p>
+            <p  className="font-regular text-sm" key={index}>{paragraph}</p>
           ))}
         </div>
       </Tab>
