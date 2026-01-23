@@ -37,9 +37,9 @@ export default function AboutPage() {
   ];
 
   return (
-    <section className="w-full bg-white">
+    <section className="w-full ">
       {/* HERO SECTION */}
-      <div className="relative w-full h-[35vh] lg:h-[45vh] overflow-hidden">
+      <div className="relative w-full h-[20vh] lg:h-[20vh] overflow-hidden">
         <Image
           src="/images/nairobi.jpg"
           alt="About RONN Law"
@@ -51,11 +51,8 @@ export default function AboutPage() {
         <div className="relative z-10 flex items-center justify-center h-full text-center px-6">
           <div className="space-y-4">
             <h1 className="text-5xl lg:text-7xl font-bold text-white tracking-tight">
-              About Us
+              Who We Are
             </h1>
-            <p className="text-lg lg:text-xl text-white/90 max-w-2xl mx-auto">
-              More than just good lawyers
-            </p>
           </div>
         </div>
       </div>
@@ -63,10 +60,7 @@ export default function AboutPage() {
       {/* INTRO SECTION */}
       <div className="max-w-7xl mx-auto px-6 py-20">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
-            Who We Are
-          </h2>
-          <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">
+          <p className="text-lg lg:text-xl text-primary font-regular leading-relaxed">
             We are a Kenya-based law firm with top-rated and forward-thinking
             lawyers who can help you with creative legal strategies. We work
             with private clients, start-ups, medium-sized businesses, large
@@ -77,10 +71,10 @@ export default function AboutPage() {
       </div>
 
       {/* THE "MORE" SECTION */}
-      <div className="bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-6">
+      <div className=" py-12">
+        <div className="max-w-7xl mx-auto ">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-4">
               What Makes Us Different
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -92,19 +86,19 @@ export default function AboutPage() {
             {aboutSections.map((section, index) => (
               <div
                 key={section.title}
-                className="bg-white p-8 rounded-lg border border-gray-200 hover:border-gray-300 transition-all duration-300 hover:shadow-lg group"
+                className="bg-white p-8 border border-teal-200 hover:border-orange transition-all duration-300 hover:shadow-lg group"
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center group-hover:bg-gray-800 transition-colors duration-300">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-orange flex items-center justify-center group-hover:bg-teal transition-colors duration-300">
                     <span className="text-white font-bold text-lg">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                   </div>
                   <div className="flex-1 space-y-3">
-                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-gray-700 transition-colors duration-200">
+                    <h3 className="text-xl font-bold text-primary group-hover:text-gray-700 transition-colors duration-200">
                       {section.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm">
+                    <p className="text-gray-600 font-regular leading-relaxed text-sm">
                       {section.description}
                     </p>
                   </div>
@@ -117,7 +111,7 @@ export default function AboutPage() {
 
       {/* OPTIONAL: Office Image Section */}
       <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="relative w-full h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl">
+        <div className="relative w-full h-[400px] lg:h-[500px] overflow-hidden shadow-xl">
           <Image
             src="/images/nairobi.jpg"
             alt="RONN Law Office"

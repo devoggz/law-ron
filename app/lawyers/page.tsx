@@ -26,7 +26,7 @@ export default function PartnersPage() {
   return (
     <section className="w-full">
       {/* HERO SECTION */}
-      <div className="relative w-full h-[20vh] lg:h-[30vh] overflow-hidden">
+      <div className="relative w-full h-[20vh] lg:h-[20vh] overflow-hidden">
         <Image
           src="/images/nairobi.jpg"
           alt="Our Partners"
@@ -37,17 +37,14 @@ export default function PartnersPage() {
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 flex items-center justify-center h-full text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white">
-            Our Partners
+            Meet the Experts Behind RONN
           </h1>
         </div>
       </div>
 
       {/* INTRO */}
-      <div className="max-w-7xl mx-auto px-6 py-16 text-center">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-          Meet the Experts Behind RONN
-        </h2>
-        <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed">
+      <div className="max-w-7xl mx-auto flex items-center justify-center py-16 text-center">
+        <p className="text-lg lg:text-xl text-primary font-regular leading-relaxed max-w-2xl">
           Our partners are the driving force behind our innovative legal
           solutions. Each brings deep experience, unique focus areas, and a
           commitment to delivering top-tier legal services. Explore their
@@ -58,24 +55,20 @@ export default function PartnersPage() {
 
       {/* TEAM CAROUSEL */}
       <section className="relative overflow-hidden bg-white py-12">
-        <div className="max-w-7xl px-6 mx-auto">
+        <div className="max-w-7xl  mx-auto">
           <div className="flex items-end justify-between mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 max-w-xl">
-              Our Team
-            </h2>
-
             {/* Carousel Navigation */}
             <div className="flex items-center gap-3">
               <button
                 onClick={() => scroll("left")}
-                className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-300 hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all"
+                className="flex items-center justify-center w-12 h-12 rounded-full border-1 border-gray-300 hover:border-orange hover:bg-orange hover:text-white transition-all"
                 aria-label="Previous"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={() => scroll("right")}
-                className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-300 hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all"
+                className="flex items-center justify-center w-12 h-12 rounded-full border-1 border-gray-300 hover:border-orange hover:bg-orange hover:text-white transition-all"
                 aria-label="Next"
               >
                 <ChevronRight className="w-5 h-5" />

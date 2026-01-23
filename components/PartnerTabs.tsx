@@ -28,12 +28,13 @@ export default function PartnerTabs({ partner }: PartnerTabsProps) {
     <Tabs
       fullWidth
       color="primary"
+      radius="none"
       aria-label="Partner profile"
       variant="solid"
-      classNames={{ panel: "pt-6" }}
+      classNames={{ panel: "pt-8" }}
     >
       <Tab key="bio" title="Bio">
-        <div className="prose max-w-none">
+        <div className="prose font-regular ">
           <p>{partner.bio}</p>
         </div>
       </Tab>

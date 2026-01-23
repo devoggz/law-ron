@@ -107,11 +107,28 @@ export default function ServiceProfileLayout({
             height={300}
             className="object-cover"
           />
-          <div className="bg-gray-50 p-6 rounded-xl ">
-            <h2 className="text-xl  mb-4">Key Contact</h2>
-            <p>{service.keyContact.name}</p>
-            <p>{service.keyContact.email}</p>
-            <p>{service.keyContact.mobile}</p>
+          <div className="bg-gray-50 p-4 ">
+            <h2 className="text-xl font-semibold text-orange mb-4">
+              Key Contact
+            </h2>
+            <p
+              className="font-bold text-primary
+            text-lg"
+            >
+              {service.keyContact.name}
+            </p>
+            <p
+              className="font-regular text-primary
+            text-md"
+            >
+              E: {service.keyContact.email}
+            </p>
+            <p
+              className="font-regular text-primary
+            text-md"
+            >
+              M: {service.keyContact.mobile}
+            </p>
           </div>
         </aside>
 
@@ -120,17 +137,19 @@ export default function ServiceProfileLayout({
           {/* Overview */}
           <section>
             <h2 className="text-2xl font-semibold mb-4">Overview</h2>
-            <p className="text-gray-700 leading-relaxed">{service.overview}</p>
+            <p className="text-gray-700 font-regular leading-relaxed">
+              {service.overview}
+            </p>
           </section>
 
           {/* Experience */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">Experience</h2>
+            <h2 className="text-2xl font-semibold mb-4">Lawyers Experience</h2>
             <div className="space-y-6">
               {service.experience.map((exp, index) => (
-                <div key={index} className="border-l-4 border-primary pl-4">
+                <div key={index} className="border-l-4 border-teal pl-4">
                   <h3 className="text-lg font-medium">{exp.name}</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 font-regular leading-relaxed">
                     {exp.description}
                   </p>
                 </div>

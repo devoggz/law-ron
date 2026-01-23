@@ -78,17 +78,18 @@ const InquiryForm = () => {
     <div className="w-full max-w-3xl mx-auto px-4 py-8">
       <div className="mb-8">
         <h1 className="text-2xl text-black font-bold">Inquiry Form</h1>
-        <p className="text-sm mt-1 text-default-500">
+        <p className="text-sm font-regular  text-default-500">
           Please fill out the form below and we'll get back to you as soon as
           possible.
         </p>
       </div>
 
-      <div className="space-y-6 text-dark-200">
+      <div className="space-y-6 text-primary font-regular">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
           <Input
             label="First Name"
             name="firstName"
+            variant="underlined"
             value={formData.firstName || ""}
             onChange={handleInputChange}
             placeholder="John"
@@ -99,6 +100,7 @@ const InquiryForm = () => {
           <Input
             label="Last Name"
             name="lastName"
+            variant="underlined"
             value={formData.lastName || ""}
             onChange={handleInputChange}
             placeholder="Doe"
@@ -107,36 +109,35 @@ const InquiryForm = () => {
           />
         </div>
 
-        <Input
-          label="Email Address"
-          name="email"
-          type="email"
-          value={formData.email || ""}
-          onChange={handleInputChange}
-          placeholder="john.doe@example.com"
-          isRequired
-          classNames={{ base: "w-full" }}
-        />
-
-        <div className="phone-input-wrapper">
-          <label htmlFor="phone-input">
-            Phone Number
-            <span className="required-asterisk">*</span>
-          </label>
-          <PhoneInput
-            id="phone-input"
-            international
-            defaultCountry="KE"
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
+          <Input
+            label="Email Address"
+            name="email"
+            type="email"
+            variant="underlined"
+            value={formData.email || ""}
+            onChange={handleInputChange}
+            placeholder="john.doe@example.com"
+            isRequired
+            classNames={{ base: "w-full" }}
+          />
+          <Input
+            label="Phone Number"
+            name="phone-input"
+            variant="underlined"
+            type="phone-input"
             value={formData.phone || ""}
-            onChange={handlePhoneChange}
+            onChange={handleInputChange}
             placeholder="+254 712 345 678"
-            aria-label="Phone number"
+            isRequired
+            classNames={{ base: "w-full" }}
           />
         </div>
 
         <Select
           label="Area of Inquiry"
           placeholder="Select area of inquiry"
+          variant="underlined"
           selectedKeys={formData.areaOfInquiry ? [formData.areaOfInquiry] : []}
           onSelectionChange={(keys) => {
             const value = Array.from(keys)[0] as string;
@@ -153,6 +154,7 @@ const InquiryForm = () => {
         <Textarea
           label="How can we help?"
           name="howCanWeHelp"
+          variant="underlined"
           value={formData.howCanWeHelp || ""}
           onChange={handleInputChange}
           placeholder="Please be as detailed as possible but do not include sensitive or confidential information."
@@ -181,7 +183,7 @@ const InquiryForm = () => {
         <button
           onClick={handleSubmit}
           aria-label="Submit inquiry"
-          className="flex-1 bg-dark-300 text-white py-2.5 px-7 rounded-full font-medium hover:bg-blue-600 transition-colors"
+          className="flex-1 bg-teal-500 text-white py-2.5 px-7 font-medium hover:bg-orange-500 transition-colors"
         >
           Submit Inquiry
         </button>

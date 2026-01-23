@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Accordion, AccordionItem } from "@heroui/react";
-import { Link } from "@heroui/link";
 
 const FAQ: React.FC = () => {
   const faqs = [
@@ -29,24 +28,25 @@ const FAQ: React.FC = () => {
   return (
     <section className="relative overflow-hidden bg-white py-20">
       <div className="max-w-7xl px-6 mx-auto">
-        <div className="flex items-center border-b border-gray-200 mb-6">
-          <span className="inline-block px-4 py-2 text-xs text-gray-200 bg-orange">
+        <div className="flex items-center  mb-6">
+          <span className="inline-block px-4 py-2 text-xs text-white rounded-tr-full rounded-br-full bg-gray-400 font-medium">
             FAQ's
           </span>
         </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Column - Header */}
           <div>
-            <h2 className="text-3xl lg:text-3xl font-bold tracking-tight text-primary leading-tight mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-primary leading-tight mb-6">
               Frequently Asked Questions
             </h2>
-            <div className="mt-8">
-              <p className="text-sm text-gray-600 max-w-sm mb-2">
-                I am an entrepreneur Looking for legal support - From company
+            <div className="mt-8 space-y-4">
+              <p className="text-base text-gray-600 leading-relaxed">
+                I am an entrepreneur looking for legal support - From company
                 formation, protecting your ideas, compliance, estate planning,
                 dispute avoidance to divesting.
-                <br />
-                <br />
+              </p>
+              <p className="text-base text-gray-600 leading-relaxed">
                 We are a business wanting to protect our interests - We have a
                 wide range of services and a passionate multidisciplinary team
                 ready to help you.
@@ -57,9 +57,15 @@ const FAQ: React.FC = () => {
           {/* Right Column - Accordion */}
           <div>
             <Accordion
-              className="shadow-sm"
               variant="splitted"
               defaultExpandedKeys={["1"]}
+              className="gap-4"
+              itemClasses={{
+                base: "shadow-none  rounded-lg hover:border-gray-300 transition-colors",
+                title: "font-semibold text-primary",
+                trigger: "py-5 px-6",
+                content: "px-6 pb-6 pt-0",
+              }}
             >
               {faqs.map((faq) => (
                 <AccordionItem
@@ -70,9 +76,8 @@ const FAQ: React.FC = () => {
                       {faq.question}
                     </span>
                   }
-                  className=" py-4"
                 >
-                  <p className="text-sm text-gray-600 leading-relaxed pb-4">
+                  <p className="text-sm text-gray-600 leading-relaxed">
                     {faq.answer}
                   </p>
                 </AccordionItem>

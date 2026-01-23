@@ -361,10 +361,10 @@
     }
 
     footer {
-        @apply  px-4 py-7 max-lg:px-5;
+        @apply   py-7 max-lg:px-5;
 
         .info {
-            @apply flex-between;
+            @apply  flex-between ;
 
             p {
                 @apply text-sm font-medium;
@@ -380,7 +380,7 @@
         }
 
         .links {
-            @apply flex flex-col lg:flex-row lg:items-center justify-between max-lg:mt-5 gap-5 text-sm;
+            @apply flex flex-col lg:flex-row  lg:items-center justify-between max-lg:mt-5 gap-5 text-sm;
 
             ul {
                 @apply lg:divide-x flex flex-col lg:flex-row gap-2.5;

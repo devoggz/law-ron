@@ -95,23 +95,23 @@ export const partners: Partner[] = [
     recognition: [
       {
         title: "Chambers and Partners 2020: Band 3 | Dispute Resolution",
-        logo: "/images/sun.png",
+        logo: "/images/chambers.png",
       },
       {
         title: "Chambers and Partners 2019: Band 3 | Dispute Resolution",
-        logo: "/images/sun.png",
+        logo: "/images/chambers.png",
       },
       {
         title: "Chambers and Partners 2018: Band 4 | Dispute Resolution",
-        logo: "/images/sun.png",
+        logo: "/images/chambers.png",
       },
       {
         title: "Chambers Global 2017 & 2016: Recognised | Dispute Resolution",
-        logo: "/images/sun.png",
+        logo: "/images/chambers.png",
       },
       {
         title: "Legal 500 2017 Recommended | Dispute Resolution",
-        logo: "/images/sun.png",
+        logo: "/images/legal500.webp",
       },
       {
         title: "Business Daily’s Top 40 under 40 2014",
@@ -125,27 +125,27 @@ export const partners: Partner[] = [
     qualifications: [
       {
         institution: "University of Nairobi",
-        logo: "/images/sun.png",
+        logo: "/images/uon.jpeg",
         detail: "LLB",
       },
       {
         institution: "Kenya School of Law",
-        logo: "/images/sun.png",
+        logo: "/images/ksl.jpg",
         detail: "Postgraduate Diploma",
       },
       {
         institution: "Chartered Institute of Arbitrators",
-        logo: "/images/sun.png",
+        logo: "/images/chatterd.jpg",
         detail: "Member",
       },
       {
         institution: "High Court of Kenya",
-        logo: "/images/sun.png",
+        logo: "/images/judiciary.jpeg",
         detail: "Advocate",
       },
       {
         institution: "Kenya Industrial Property Institute",
-        logo: "/images/sun.png",
+        logo: "/images/kipi.png",
         detail: "Patent Agent",
       },
     ],
@@ -162,7 +162,7 @@ export const partners: Partner[] = [
     cvUrl: "/cvs/anthony-njogu.pdf",
 
     bio: `Njau is a top-rated projects lawyer who advises on energy, infrastructure, natural resources, project finance and PPPs. He has significant experience advising companies in energy M&A transactions. He works with a wide range of clients including developers, energy companies and lenders in large scale Kenyan and cross-border projects. 
-He has a deep understanding of large projects and investment projects in Kenya and has been recognised several times for his work. His projects experience includes railways, highways and ports.
+He has a deep understanding of large projects and investment projects in Kenya and has been recognised several times for his work. His projects experience includes railways, highways and ports. 
 
 In energy, he has acted for clients with a particular emphasis on preparing and negotiating O&M contracts, concession agreements and PPAs. Aside from energy and projects, Njau also advises businesses on joint ventures, IP and employment law issues.`,
 
@@ -212,62 +212,58 @@ In energy, he has acted for clients with a particular emphasis on preparing and 
     recognition: [
       {
         title: "Chambers and Partners 2020: Band 3 | Projects and Energy",
-        logo: "/images/sun.png",
+        logo: "/images/chambers.png",
       },
       {
         title: "Chambers and Partners 2019: Band 3 | Projects and Energy",
-        logo: "/images/sun.png",
+        logo: "/images/chambers.png",
       },
       {
         title:
           "IFLR1000’s 2019 Financial and Corporate Guide: Highly Regarded Lawyer | Energy and Infrastructure, Project Finance.",
-        logo: "/images/sun.png",
+        logo: "/images/iflr100.png",
       },
       {
         title: "Chambers and Partners 2018: Band 3 | Projects and Energy.",
-        logo: "/images/sun.png",
+        logo: "/images/chambers.png",
       },
       {
         title:
           "IFLR1000’s 2018 Financial and Corporate Guide: Highly Regarded Lawyer | Energy and Infrastructure, Project Finance.",
-        logo: "/images/sun.png",
+        logo: "/images/iflr100.png",
       },
       {
         title: "Chambers and Partners 2017: Band 3 | Projects and Energy",
-        logo: "/images/sun.png",
+        logo: "/images/chambers.png",
       },
       {
         title: "Legal 500 2017: Recommended Lawyer | Projects and Energy.",
-        logo: "/images/sun.png",
+        logo: "/images/legal500.webp",
       },
       {
         title: "Chambers Global, 2016 | Rising Star",
-        logo: "/images/sun.png",
+        logo: "/images/chambers.png",
       },
       {
         title: "IFLR1000 2016: Leading Lawyer",
-        logo: "/images/sun.png",
-      },
-      {
-        title: "Legal 500 2016: Recommended Lawyer",
-        logo: "/images/sun.png",
+        logo: "/images/iflr100.png",
       },
     ],
 
     qualifications: [
       {
         institution: "University of Warwick",
-        logo: "/images/sun.png",
+        logo: "/images/warwick.jpeg",
         detail: "English Solicitors Legal Practice",
       },
       {
         institution: "University of Warwick",
-        logo: "/images/sun.png",
+        logo: "/images/warwick.jpeg",
         detail: "Masters | International Economic Law (Merit).",
       },
       {
         institution: "High Court of Kenya",
-        logo: "/images/sun.png",
+        logo: "/images/judiciary.jpeg",
         detail: "Advocate",
       },
     ],
@@ -318,33 +314,33 @@ In energy, he has acted for clients with a particular emphasis on preparing and 
     recognition: [
       {
         title: "Legal 500 2020: Leading Individual | Employment",
-        logo: "/images/sun.png",
+        logo: "/images/legal500.webp",
       },
     ],
     qualifications: [
       {
         institution: "University of Nairobi",
-        logo: "/images/sun.png",
+        logo: "/images/uon.jpeg",
         detail: "LLB",
       },
       {
         institution: "Kenya School of Law",
-        logo: "/images/sun.png",
+        logo: "/images/ksl.jpg",
         detail: "Postgraduate Diploma",
       },
       {
         institution: "Chartered Institute of Arbitrators",
-        logo: "/images/sun.png",
+        logo: "/images/chatterd.jpg",
         detail: "Member",
       },
       {
         institution: "High Court of Kenya",
-        logo: "/images/sun.png",
+        logo: "/images/judiciary.jpeg",
         detail: "Advocate",
       },
       {
         institution: "Commissioner for Oaths & Notary Public",
-        logo: "/images/sun.png",
+        logo: "/images/commisioner.jpeg",
         detail: "Certified Company Secretary",
       },
     ],
@@ -416,31 +412,26 @@ In energy, he has acted for clients with a particular emphasis on preparing and 
           "Preparation and registration of securities including NCBA, Standard Chartered, and Stanbic Bank Limited.",
       },
     ],
-    recognition: [
-      {
-        title: "Legal 500 2020: Leading Individual | Employment",
-        logo: "/images/sun.png",
-      },
-    ],
+    recognition: [],
     qualifications: [
       {
         institution: "University of Nairobi",
-        logo: "/images/sun.png",
+        logo: "/images/uon.jpeg",
         detail: "LLB",
       },
       {
         institution: "Kenya School of Law",
-        logo: "/images/sun.png",
+        logo: "/images/ksl.jpg",
         detail: "Postgraduate Diploma",
       },
       {
         institution: "High Court of Kenya",
-        logo: "/images/sun.png",
+        logo: "/images/judiciary.jpeg",
         detail: "Advocate",
       },
       {
         institution: "Commissioner for Oaths & Notary Public",
-        logo: "/images/sun.png",
+        logo: "/images/commisioner.jpeg",
         detail: "Certified Public Secretary & Governance Auditor",
       },
     ],
@@ -483,31 +474,26 @@ In energy, he has acted for clients with a particular emphasis on preparing and 
           "Advised on setup of a US$500M private equity fund, including stress-testing for international investor attractiveness.",
       },
     ],
-    recognition: [
-      {
-        title: "Legal 500 2020: Leading Individual | Employment",
-        logo: "/images/sun.png",
-      },
-    ],
+    recognition: [],
     qualifications: [
       {
         institution: "University of Nairobi",
-        logo: "/images/sun.png",
+        logo: "/images/uon.jpeg",
         detail: "LLB (Hons)",
       },
       {
         institution: "University of Reading",
-        logo: "/images/sun.png",
+        logo: "/images/reading.png",
         detail: "MSc in Capital Markets, Regulation and Compliance",
       },
       {
         institution: "High Court of Kenya",
-        logo: "/images/sun.png",
+        logo: "/images/judiciary.jpeg",
         detail: "Advocate",
       },
       {
         institution: "Institute of Certified Secretaries of Kenya",
-        logo: "/images/sun.png",
+        logo: "/images/secretaries_logo.jpeg",
         detail: "Member",
       },
     ],

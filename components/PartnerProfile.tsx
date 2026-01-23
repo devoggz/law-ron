@@ -27,12 +27,13 @@ export default function PartnerProfile({
 
         <div className="relative z-10 h-full flex items-center justify-center text-center ">
           <div>
-            <div className="absolute left-12 lg:text-left">
+            <div className="absolute bottom-6 left-6 lg:text-left">
               <h2 className="text-4xl font-bold text-gray-200">
                 {partner.name}
               </h2>
               <p className="text-gray-200">
-                {partner.title} | {partner.practice}{" "}
+                <span className="font-bold">{partner.title} </span> |{" "}
+                {partner.practice}{" "}
               </p>
               <p className="text-sm mt-1 text-gray-500"></p>
             </div>
@@ -51,7 +52,7 @@ export default function PartnerProfile({
       </div>
 
       {/* CONTENT */}
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto py-16 grid grid-cols-1 lg:grid-cols-4 gap-12">
         {/* LEFT COLUMN */}
         <aside className="lg:col-span-1 space-y-6">
           {/* IMAGE + DOWNLOAD */}
@@ -67,12 +68,12 @@ export default function PartnerProfile({
             {/* DOWNLOAD BUTTON */}
           </div>
 
-          <div className="text-sm space-y-2">
-            <p>
-              <strong>Email:</strong> {partner.email}
+          <div className="text-sm space-y-2 font-medium">
+            <p className="">
+              <strong>E:</strong> {partner.email}
             </p>
             <p>
-              <strong>Mobile:</strong> {partner.mobile}
+              <strong>M:</strong> {partner.mobile}
             </p>
             <p>
               <strong>Focus:</strong> {partner.focus}

@@ -1,18 +1,18 @@
 "use client";
 
 import React from "react";
-import acmeLogo from "@/public/images/logo-acme.png";
-import quantumLogo from "@/public/images/logo-quantum.png";
-import echoLogo from "@/public/images/logo-echo.png";
-import celestialLogo from "@/public/images/logo-celestial.png";
-import pulseLogo from "@/public/images/logo-pulse.png";
+import safLogo from "@/public/images/saf.png";
+import araLogo from "@/public/images/ara.png";
+import mulLogo from "@/public/images/mul.png";
+import sanLogo from "@/public/images/san.png";
+import ubLogo from "@/public/images/ub.png";
 import apexLogo from "@/public/images/logo-apex.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 function LogoTicker() {
   return (
-    <div className="py-8  bg-white md:py-8">
+    <div className="py-4  bg-white md:py-4">
       <div className="container">
         <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
           <motion.div
@@ -28,65 +28,39 @@ function LogoTicker() {
             }}
           >
             <Image
-              src={acmeLogo}
+              src={safLogo}
               alt="Acme Logo"
               className="logo-ticker-image"
             />
+            <Image src={araLogo} alt="QTM Logo" className="logo-ticker-image" />
             <Image
-              src={quantumLogo}
-              alt="QTM Logo"
-              className="logo-ticker-image"
-            />
-            <Image
-              src={echoLogo}
+              src={mulLogo}
               alt="Echo Logo"
               className="logo-ticker-image"
             />
+            <Image src={sanLogo} alt="Cel Logo" className="logo-ticker-image" />
             <Image
-              src={celestialLogo}
-              alt="Cel Logo"
-              className="logo-ticker-image"
-            />
-            <Image
-              src={pulseLogo}
+              src={ubLogo}
               alt="Pulse Logo"
-              className="logo-ticker-image"
-            />
-            <Image
-              src={apexLogo}
-              alt="Apex Logo"
               className="logo-ticker-image"
             />
 
             {/* Second Logo Set */}
             <Image
-              src={acmeLogo}
+              src={safLogo}
               alt="Acme Logo"
               className="logo-ticker-image"
             />
+            <Image src={araLogo} alt="QTM Logo" className="logo-ticker-image" />
             <Image
-              src={quantumLogo}
-              alt="QTM Logo"
-              className="logo-ticker-image"
-            />
-            <Image
-              src={echoLogo}
+              src={mulLogo}
               alt="Echo Logo"
               className="logo-ticker-image"
             />
+            <Image src={sanLogo} alt="Cel Logo" className="logo-ticker-image" />
             <Image
-              src={celestialLogo}
-              alt="Cel Logo"
-              className="logo-ticker-image"
-            />
-            <Image
-              src={pulseLogo}
+              src={ubLogo}
               alt="Pulse Logo"
-              className="logo-ticker-image"
-            />
-            <Image
-              src={apexLogo}
-              alt="Apex Logo"
               className="logo-ticker-image"
             />
           </motion.div>

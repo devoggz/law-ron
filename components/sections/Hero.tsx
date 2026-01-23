@@ -10,7 +10,7 @@ const Hero = () => {
     <section
       className="
         relative
-        h-[700px]
+        h-[686px]
         overflow-hidden
       "
     >
@@ -46,16 +46,16 @@ const Hero = () => {
             </p>
 
             <div className="mt-8 flex  gap-4">
-              <Link
-                href="/contact"
-                className={`
-                  ${glassButton}
-                  px-4 py-2  font-medium
-                `}
-              >
-                Our Expertise
-                <ChevronRight className="h-6 w-6 ml-8" />
-              </Link>
+              {/*<Link*/}
+              {/*  href="/contact"*/}
+              {/*  className={`*/}
+              {/*    ${glassButton}*/}
+              {/*    px-4 py-2  font-medium*/}
+              {/*  `}*/}
+              {/*>*/}
+              {/*  Our Expertise*/}
+              {/*  <ChevronRight className="h-6 w-6 ml-8" />*/}
+              {/*</Link>*/}
 
               <Link
                 href="/about"

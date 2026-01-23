@@ -32,7 +32,6 @@ export const Navbar = () => {
   return (
     <header className="w-full sticky top-0 z-50">
       <HeroUINavbar
-        isBordered
         maxWidth="xl"
         className="bg-background/80 backdrop-blur-md py-1"
         isMenuOpen={isMenuOpen}
@@ -86,7 +85,7 @@ export const Navbar = () => {
                           <li key={service.slug}>
                             <NextLink
                               href={`/services/${service.slug}`}
-                              className="block px-4 py-2 text-sm text-foreground/80 hover:text-orange hover:bg-foreground/5 transition"
+                              className="block px-4 py-2 font-regular text-sm text-foreground/80 hover:text-orange hover:bg-foreground/5 transition"
                             >
                               {service.label}
                             </NextLink>
@@ -120,10 +119,10 @@ export const Navbar = () => {
             <Button
               onPress={onOpen}
               radius="none"
-              className="text-white bg-teal-600 hover:bg-orange-700 px-5 py-2"
+              className="text-white bg-teal-500 font-medium hover:bg-orange-500 px-3 py-2"
               endContent={<ChevronRight className="h-5 w-5" />}
             >
-              Get Started
+              Let's Talk
             </Button>
 
             <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="lg">
