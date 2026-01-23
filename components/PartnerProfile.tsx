@@ -129,7 +129,7 @@ export default function PartnerProfileLayout({
             alt={partner.name}
             width={400}
             height={500}
-            className="object-cover"
+            className="object-cover rounded-sm"
           />
 
           <div className="bg-gray-50 p-4 space-y-6 text-sm font-medium text-primary">
