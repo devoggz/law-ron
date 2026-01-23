@@ -23,7 +23,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
 }) => {
   return (
     <Link href={`/team/${slug}`} className="block group">
-      <div className="relative h-[500px] overflow-hidden cursor-pointer">
+      <div className="relative h-[486px] rounded-sm overflow-hidden cursor-pointer">
         {/* Team Member Image */}
         <Image
           src={image}

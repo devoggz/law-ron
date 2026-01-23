@@ -28,7 +28,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="relative h-[380px] overflow-hidden cursor-pointer group shadow-md"
+      className="relative h-[380px] overflow-hidden cursor-pointer rounded-sm group shadow-md"
     >
       {/* Background Image */}
       <Image

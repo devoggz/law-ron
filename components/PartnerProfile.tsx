@@ -17,7 +17,6 @@ export default function PartnerProfileLayout({
   const currentIndex = partners.findIndex((p) => p.slug === partner.slug);
 
   const previousPartner = currentIndex > 0 ? partners[currentIndex - 1] : null;
-
   const nextPartner =
     currentIndex < partners.length - 1 ? partners[currentIndex + 1] : null;
 
@@ -39,10 +38,10 @@ export default function PartnerProfileLayout({
         {/* Title */}
         <div className="relative z-10 flex items-center justify-center h-full text-center pointer-events-none">
           <div>
-            <h1 className="text-4xl lg:text-6xl font-bold text-white">
+            <h1 className="text-4xl lg:text-5xl font-bold text-white">
               {partner.name}
             </h1>
-            <p className="mt-2 text-white/80 font-semibold text-lg lg:text-base">
+            <p className="mt-2 text-white/80 font-semibold text-2xl lg:text-3xl">
               {partner.title}
             </p>
             <p className="mt-2 text-white/80 text-sm lg:text-base">
@@ -51,22 +50,8 @@ export default function PartnerProfileLayout({
           </div>
         </div>
 
-        {/* CV DOWNLOAD */}
-        {partner.cvUrl && (
-          <Button
-            as="a"
-            href={partner.cvUrl}
-            download
-            radius="none"
-            className="absolute top-6 right-6 z-20 bg-orange/80 text-white backdrop-blur hover:bg-teal"
-          >
-            <Download size={16} className="mr-2" />
-            Download CV
-          </Button>
-        )}
-
-        {/* NAVIGATION – bottom pinned (same logic as services) */}
-        <div className="absolute bottom-0 left-0 right-0 z-20">
+        {/* DESKTOP NAVIGATION – bottom pinned */}
+        <div className="hidden lg:block absolute bottom-0 left-0 right-0 z-20">
           <div className="max-w-7xl mx-auto px-6 pb-6 flex items-center justify-between text-white">
             {/* Previous */}
             {previousPartner ? (
@@ -101,10 +86,43 @@ export default function PartnerProfileLayout({
         </div>
       </div>
 
+      {/* MOBILE NAVIGATION – below hero */}
+      <div className="lg:hidden bg-gray-100 py-4">
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between text-gray-800">
+          {previousPartner ? (
+            <Link
+              href={`/team/${previousPartner.slug}`}
+              className="group flex items-center gap-2 text-sm font-medium opacity-80 hover:opacity-100 transition"
+            >
+              <span className="group-hover:-translate-x-1 transition-transform">
+                ←
+              </span>
+              {previousPartner.name}
+            </Link>
+          ) : (
+            <span />
+          )}
+
+          {nextPartner ? (
+            <Link
+              href={`/team/${nextPartner.slug}`}
+              className="group flex items-center gap-2 text-sm font-medium opacity-80 hover:opacity-100 transition"
+            >
+              {nextPartner.name}
+              <span className="group-hover:translate-x-1 transition-transform">
+                →
+              </span>
+            </Link>
+          ) : (
+            <span />
+          )}
+        </div>
+      </div>
+
       {/* CONTENT */}
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-4 gap-12">
-        {/* LEFT COLUMN */}
-        <aside className="lg:col-span-1 space-y-6">
+      <div className="max-w-7xl mx-auto py-16 grid grid-cols-1 lg:grid-cols-4 gap-12">
+        {/* LEFT COLUMN – Key Contact */}
+        <aside className="lg:col-span-1 space-y-6 order-last lg:order-first">
           <Image
             src={partner.image}
             alt={partner.name}
@@ -113,7 +131,7 @@ export default function PartnerProfileLayout({
             className="object-cover"
           />
 
-          <div className="bg-gray-50 p-4 space-y-2 text-sm font-bold text-primary">
+          <div className="bg-gray-50 p-4 space-y-6 text-sm font-medium text-primary">
             <p>
               <strong>E:</strong> {partner.email}
             </p>
@@ -123,6 +141,21 @@ export default function PartnerProfileLayout({
             <p>
               <strong>Focus:</strong> {partner.focus}
             </p>
+
+            {/* CV DOWNLOAD – now visible below Focus */}
+            {partner.cvUrl && (
+              <Button
+                as="a"
+                href={partner.cvUrl}
+                download
+                radius="none"
+                variant="bordered"
+                className="w-full flex items-center justify-center gap-2 mt-2 text-primary"
+              >
+                <Download size={16} />
+                Download CV
+              </Button>
+            )}
           </div>
         </aside>
 

@@ -6,7 +6,10 @@ import araLogo from "@/public/images/ara.png";
 import mulLogo from "@/public/images/mul.png";
 import sanLogo from "@/public/images/san.png";
 import ubLogo from "@/public/images/ub.png";
-import apexLogo from "@/public/images/logo-apex.png";
+import eablLogo from "@/public/images/eabl.png";
+import imLogo from "@/public/images/im.png";
+import crbcLogo from "@/public/images/crbc.png";
+import copiaLogo from "@/public/images/copia.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -21,7 +24,7 @@ function LogoTicker() {
               x: "-50%",
             }}
             transition={{
-              duration: 20,
+              duration: 40,
               repeat: Infinity,
               ease: "linear",
               repeatType: "loop",
@@ -45,6 +48,27 @@ function LogoTicker() {
               className="logo-ticker-image"
             />
 
+            <Image
+              src={eablLogo}
+              alt="Pulse Logo"
+              className="logo-ticker-image"
+            />
+            <Image
+              src={imLogo}
+              alt="Pulse Logo"
+              className="logo-ticker-image"
+            />
+            <Image
+              src={crbcLogo}
+              alt="Pulse Logo"
+              className="logo-ticker-image"
+            />
+            <Image
+              src={copiaLogo}
+              alt="Pulse Logo"
+              className="logo-ticker-image"
+            />
+
             {/* Second Logo Set */}
             <Image
               src={safLogo}
@@ -60,6 +84,26 @@ function LogoTicker() {
             <Image src={sanLogo} alt="Cel Logo" className="logo-ticker-image" />
             <Image
               src={ubLogo}
+              alt="Pulse Logo"
+              className="logo-ticker-image"
+            />
+            <Image
+              src={eablLogo}
+              alt="Pulse Logo"
+              className="logo-ticker-image"
+            />
+            <Image
+              src={imLogo}
+              alt="Pulse Logo"
+              className="logo-ticker-image"
+            />
+            <Image
+              src={crbcLogo}
+              alt="Pulse Logo"
+              className="logo-ticker-image"
+            />
+            <Image
+              src={copiaLogo}
               alt="Pulse Logo"
               className="logo-ticker-image"
             />

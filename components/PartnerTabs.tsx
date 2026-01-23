@@ -34,7 +34,7 @@ export default function PartnerTabs({ partner }: PartnerTabsProps) {
       classNames={{ panel: "pt-8" }}
     >
       <Tab key="bio" title="Bio">
-        <div className="prose font-regular ">
+        <div className="prose font-regular">
           <p>{partner.bio}</p>
         </div>
       </Tab>
@@ -51,11 +51,11 @@ export default function PartnerTabs({ partner }: PartnerTabsProps) {
       </Tab>
 
       <Tab key="recognition" title="Recognition">
-        <div className="grid grid-cols-3 items-center gap-8">
+        <div className="flex flex-wrap gap-6">
           {partner.recognition.map((rec, index) => (
             <div
               key={index}
-              className="w-64 text-start flex flex-col items-center"
+              className="w-36 flex-shrink-0 text-center flex flex-col items-center"
             >
               <img
                 src={rec.logo}
@@ -71,7 +71,7 @@ export default function PartnerTabs({ partner }: PartnerTabsProps) {
       <Tab key="qualifications" title="Admissions & Education">
         <div className="space-y-6">
           {partner.qualifications.map((q, index) => (
-            <div key={index} className="flex items-center gap-4">
+            <div key={index} className="flex items-center gap-4 flex-wrap">
               <img
                 src={q.logo}
                 alt={q.institution}

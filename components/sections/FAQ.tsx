@@ -27,9 +27,9 @@ const FAQ: React.FC = () => {
 
   return (
     <section className="relative overflow-hidden bg-white py-20">
-      <div className="max-w-7xl px-6 mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="flex items-center  mb-6">
-          <span className="inline-block px-4 py-2 text-xs text-white rounded-tr-full rounded-br-full bg-gray-400 font-medium">
+          <span className="inline-block px-4 py-2 text-xs text-white rounded-tr-full rounded-br-full bg-primary font-medium">
             FAQ's
           </span>
         </div>
@@ -41,12 +41,12 @@ const FAQ: React.FC = () => {
               Frequently Asked Questions
             </h2>
             <div className="mt-8 space-y-4">
-              <p className="text-base text-gray-600 leading-relaxed">
+              <p className="text-regular text-gray-600 leading-relaxed">
                 I am an entrepreneur looking for legal support - From company
                 formation, protecting your ideas, compliance, estate planning,
                 dispute avoidance to divesting.
               </p>
-              <p className="text-base text-gray-600 leading-relaxed">
+              <p className="text-regular text-gray-600 leading-relaxed">
                 We are a business wanting to protect our interests - We have a
                 wide range of services and a passionate multidisciplinary team
                 ready to help you.
@@ -63,8 +63,8 @@ const FAQ: React.FC = () => {
               itemClasses={{
                 base: "shadow-none  rounded-lg hover:border-gray-300 transition-colors",
                 title: "font-semibold text-primary",
-                trigger: "py-5 px-6",
-                content: "px-6 pb-6 pt-0",
+                trigger: "py-5 ",
+                content: " pb-4 pt-0",
               }}
             >
               {faqs.map((faq) => (

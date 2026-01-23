@@ -61,10 +61,10 @@ const About = () => {
             variants={itemVariants}
             className="lg:col-span-6 space-y-6"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold leading-tight text-primary">
+            <h2 className="text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-primary">
               <motion.span variants={itemVariants} className="block">
-                We are a Kenya-based law firm with top-rated and
-                forward-thinking lawyers who deliver creative legal strategies.
+                We are a Kenya-based law firm with forward-thinking lawyers who
+                deliver creative legal strategies.
               </motion.span>
             </h2>
 

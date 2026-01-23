@@ -4,7 +4,13 @@
 
 @source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
 
+* {
+    scroll-behavior: smooth;
+}
+
 @custom-variant dark (&:is(.dark *));
+
+
 
 @font-face {
     font-family: "Regular";
@@ -74,6 +80,10 @@
     @apply font-medium text-xs;
 }
 
+@layer components {
+    .logo-ticker-image {
+        @apply h-8 w-auto;
+    }
 
 
 
@@ -391,4 +401,5 @@
             }
         }
     }
+}
 

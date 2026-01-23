@@ -39,6 +39,7 @@ export const partners: Partner[] = [
     email: "anthony.njogu@ronn.law",
     mobile: "+254 722 348 260",
     focus: "Corporate, Intellectual Property, Media and Telecoms’ disputes",
+    cvUrl: "/cvs/anthony-njogu.pdf",
     bio: `Anthony is a responsive, thorough and intuitive dispute resolution lawyer who has worked on several prominent and groundbreaking cases. In both arbitration and litigation, clients know him for his good legal mind and understanding of commercial disputes. He is also known for being efficient, available and prepared. He has great business acumen and is highly regarded for his ability to translate business information into a legal argument. He works with multinational clients ranging from banks and media companies to pharmaceutical companies on their constitutional, insolvency, IP, tax and public procurement matters.`,
     experience: [
       {
@@ -159,7 +160,7 @@ export const partners: Partner[] = [
     email: "njau.mukuha@ronn.law",
     mobile: "+254 721 683 882",
     focus: "Energy, Infrastructure and Natural Resources",
-    cvUrl: "/cvs/anthony-njogu.pdf",
+    cvUrl: "/cvs/njau-makuha.pdf",
 
     bio: `Njau is a top-rated projects lawyer who advises on energy, infrastructure, natural resources, project finance and PPPs. He has significant experience advising companies in energy M&A transactions. He works with a wide range of clients including developers, energy companies and lenders in large scale Kenyan and cross-border projects. 
 He has a deep understanding of large projects and investment projects in Kenya and has been recognised several times for his work. His projects experience includes railways, highways and ports. 
@@ -278,6 +279,7 @@ In energy, he has acted for clients with a particular emphasis on preparing and 
     email: "sean.omondi@ronn.law",
     mobile: "+254 722 443 058",
     focus: "Employee Disputes and Union matters",
+    cvUrl: "/cvs/sean-omondi.pdf",
     bio: `An innovative, strategic, efficient and razor-sharp litigator, Sean helps clients with both corporate and employment disputes. He is recognised for complex, high-value employment litigation and advising large corporates, NGOs and senior executives on collective bargaining, employment policies and procedures, performance management, separations, staff contracting and unionization.`,
     experience: [
       {
@@ -354,6 +356,7 @@ In energy, he has acted for clients with a particular emphasis on preparing and 
     email: "muthoni.runji@ronn.law",
     mobile: "+254 722 639 739",
     focus: "Real Estate, Banking, Finance",
+    cvUrl: "/cvs/muthoni-runji.pdf",
     bio: `Muthoni is a real estate & finance lawyer who balances detail-orientation with creative advice. She works on complex real estate developments, project structuring, commercial sales and leasing, and advises Kenyan, Pan-African and multinational businesses on finance matters with a focus on debt and securities.`,
     experience: [
       {
@@ -442,6 +445,7 @@ In energy, he has acted for clients with a particular emphasis on preparing and 
     name: "Mwangi Mbogo",
     title: "Partner",
     practice: "Dispute Resolution & Real Estate Banking",
+    cvUrl: "/cvs/mwangi-mbogo.pdf",
     email: "mwangi.mbogo@ronn.law",
     mobile: "+254 722 443 058",
     focus:

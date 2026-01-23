@@ -113,19 +113,34 @@ export const Navbar = () => {
           </ul>
         </NavbarContent>
 
-        {/* CTA */}
-        <NavbarContent justify="end" className="hidden sm:flex basis-1/4 gap-4">
-          <NavbarItem>
+        {/* CTA + MOBILE TOGGLE */}
+        <NavbarContent
+          justify="end"
+          className="flex items-center gap-4 basis-1/4"
+        >
+          {/* Hamburger - visible on mobile and tablet */}
+          <div className="lg:hidden">
+            <NavbarMenuToggle />
+          </div>
+
+          {/* Let's Talk - only visible on desktop */}
+          <NavbarItem className="hidden lg:flex">
             <Button
               onPress={onOpen}
-              radius="none"
-              className="text-white bg-teal-500 font-medium hover:bg-orange-500 px-3 py-2"
+              radius="sm"
+              variant="bordered"
+              className="text-orange flex items-center font-regular hover:bg-orange border-teal hover:text-gray-200 hover:border-orange"
               endContent={<ChevronRight className="h-5 w-5" />}
             >
               Let's Talk
             </Button>
 
-            <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="lg">
+            <Modal
+              isOpen={isOpen}
+              placement="center"
+              onOpenChange={onOpenChange}
+              size="lg"
+            >
               <ModalContent>
                 {() => (
                   <ModalBody className="pb-6">
@@ -135,11 +150,6 @@ export const Navbar = () => {
               </ModalContent>
             </Modal>
           </NavbarItem>
-        </NavbarContent>
-
-        {/* MOBILE TOGGLE */}
-        <NavbarContent justify="end" className="sm:hidden">
-          <NavbarMenuToggle />
         </NavbarContent>
 
         {/* MOBILE MENU */}
@@ -177,6 +187,17 @@ export const Navbar = () => {
                 </NavbarMenuItem>
               ))}
             </div>
+
+            {/* Mobile CTA */}
+            <Button
+              onPress={onOpen}
+              radius="sm"
+              variant="bordered"
+              className="text-orange flex items-center font-regular hover:bg-orange border-teal hover:text-gray-200 hover:border-orange"
+              endContent={<ChevronRight className="h-5 w-5" />}
+            >
+              Let's Talk
+            </Button>
           </div>
         </NavbarMenu>
       </HeroUINavbar>

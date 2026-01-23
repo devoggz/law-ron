@@ -60,8 +60,8 @@ export default function ServiceProfileLayout({
           </h1>
         </div>
 
-        {/* Navigation – bottom pinned */}
-        <div className="absolute bottom-0 left-0 right-0 z-20">
+        {/* Desktop Navigation – bottom pinned */}
+        <div className="hidden lg:block absolute bottom-0 left-0 right-0 z-20">
           <div className="max-w-7xl mx-auto px-6 pb-6 flex items-center justify-between text-white">
             {/* Previous */}
             {previousService ? (
@@ -96,10 +96,43 @@ export default function ServiceProfileLayout({
         </div>
       </div>
 
+      {/* Mobile Navigation – below hero */}
+      <div className="lg:hidden bg-gray-100 py-4">
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between text-gray-800">
+          {previousService ? (
+            <Link
+              href={`/services/${previousService.slug}`}
+              className="group flex items-center gap-2 text-sm font-medium opacity-80 hover:opacity-100 transition"
+            >
+              <span className="group-hover:-translate-x-1 transition-transform">
+                ←
+              </span>
+              {previousService.name}
+            </Link>
+          ) : (
+            <span />
+          )}
+
+          {nextService ? (
+            <Link
+              href={`/services/${nextService.slug}`}
+              className="group flex items-center gap-2 text-sm font-medium opacity-80 hover:opacity-100 transition"
+            >
+              {nextService.name}
+              <span className="group-hover:translate-x-1 transition-transform">
+                →
+              </span>
+            </Link>
+          ) : (
+            <span />
+          )}
+        </div>
+      </div>
+
       {/* CONTENT SECTION */}
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-4 gap-12">
         {/* LEFT COLUMN – Key Contact */}
-        <aside className="lg:col-span-1 space-y-6">
+        <aside className="lg:col-span-1 space-y-6 order-last lg:order-first">
           <Image
             src={service.keyContact.image}
             alt={service.keyContact.name}
@@ -107,26 +140,17 @@ export default function ServiceProfileLayout({
             height={300}
             className="object-cover"
           />
-          <div className="bg-gray-50 p-4 ">
+          <div className="bg-gray-50 p-4">
             <h2 className="text-xl font-semibold text-orange mb-4">
               Key Contact
             </h2>
-            <p
-              className="font-bold text-primary
-            text-lg"
-            >
+            <p className="font-bold text-primary text-lg">
               {service.keyContact.name}
             </p>
-            <p
-              className="font-regular text-primary
-            text-md"
-            >
+            <p className="font-regular text-primary text-md">
               E: {service.keyContact.email}
             </p>
-            <p
-              className="font-regular text-primary
-            text-md"
-            >
+            <p className="font-regular text-primary text-md">
               M: {service.keyContact.mobile}
             </p>
           </div>

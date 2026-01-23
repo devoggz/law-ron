@@ -26,7 +26,7 @@ const fadeUp: Variants = {
 
 const Hero = () => {
   return (
-    <section className="relative h-[400px] md:h-[500px] lg:h-[686px] overflow-hidden">
+    <section className="relative h-[540px] md:h-[500px] rounded-sm lg:h-[686px] overflow-hidden">
       {/* Background Image – slow infinite zoom */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
@@ -52,7 +52,7 @@ const Hero = () => {
           {/* Left content */}
           <div className="max-w-2xl text-white space-y-8">
             <motion.h1
-              className="text-4xl md:text-4xl lg:text-7xl text-gray-200 font-semibold tracking-tight leading-tighter"
+              className="text-5xl md:text-5xl lg:text-7xl text-gray-200 font-semibold tracking-tight leading-tighter"
               variants={fadeUp}
               initial="hidden"
               animate="visible"
@@ -60,11 +60,11 @@ const Hero = () => {
             >
               experience <span className="font-bold text-orange">RONN.</span>
               <br />
-              <span className="text-teal">= experience Law</span>
+              <span className="text-teal">= experience LAW.</span>
             </motion.h1>
 
             <motion.p
-              className="mt-6 md:text-lg text-white/80 max-w-3xl"
+              className="mt-6 md:text-lg text-white/80 tracking-tight max-w-3xl"
               variants={fadeUp}
               initial="hidden"
               animate="visible"
@@ -87,7 +87,7 @@ const Hero = () => {
             >
               <Link
                 href="/about"
-                className={`${glassButton} px-4 py-2 font-medium`}
+                className={`${glassButton} px-4 rounded-sm py-2 font-medium`}
               >
                 Learn More
                 <ChevronRight className="h-6 w-6 ml-8" />
