@@ -48,11 +48,7 @@ function LogoTicker() {
               className="logo-ticker-image"
             />
 
-            <Image
-              src={eablLogo}
-              alt="Pulse Logo"
-              className="logo-ticker-image"
-            />
+      
             <Image
               src={imLogo}
               alt="Pulse Logo"
