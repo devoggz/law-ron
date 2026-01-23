@@ -23,7 +23,7 @@ const About = () => {
 
   return (
     <section ref={sectionRef} className="relative overflow-hidden bg-white">
-      <div className="max-w-7xl mx-auto px-6 py-16 lg:py-28">
+      <div className="max-w-7xl mx-auto py-16 lg:py-28">
         {/* ABOUT US label */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}

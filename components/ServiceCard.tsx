@@ -37,8 +37,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
 
       {/* Title — top right */}
-      <div className="absolute top-5 right-5 z-10 max-w-[70%] text-right">
-        <h3 className="text-lg lg:text-xl font-semibold text-white leading-tight">
+      <div className="absolute top-6 right-6 z-10 max-w-[70%] ">
+        <h3 className="text-lg lg:text-2xl font-bold text-white leading-tight">
           {title}
         </h3>
       </div>
@@ -51,13 +51,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       </div>
 
       {/* Hover Overlay */}
-      <div className="absolute inset-0 z-20 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+      <div className="absolute inset-0 z-20 bg-teal/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
         <button
           onClick={(e) => {
             e.stopPropagation();
             router.push(`/services/${slug}`);
           }}
-          className="flex items-center gap-3 px-5 py-2.5 bg-white/20 backdrop-blur-md border border-white/30 rounded-full hover:bg-white/30 transition-all duration-300"
+          className="flex items-center gap-3 px-4 py-2.5 bg-white/20 backdrop-blur-md border border-white/30  hover:bg-white/30 transition-all duration-300"
         >
           <span className="text-white font-medium text-sm whitespace-nowrap">
             Discover More
