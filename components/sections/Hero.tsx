@@ -64,7 +64,7 @@ const Hero = () => {
             </motion.h1>
 
             <motion.p
-              className="mt-6 md:text-lg text-white/80 max-w-2xl"
+              className="mt-6 md:text-lg text-white/80 max-w-3xl"
               variants={fadeUp}
               initial="hidden"
               animate="visible"
