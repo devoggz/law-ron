@@ -86,7 +86,7 @@ export default function AboutPage() {
             {aboutSections.map((section, index) => (
               <div
                 key={section.title}
-                className="bg-white p-8 border border-teal-200 hover:border-orange transition-all duration-300 hover:shadow-lg group"
+                className="bg-white p-8 border border-teal-200 hover:border-orange transition-all  duration-300 hover:shadow-lg group"
               >
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-orange flex items-center justify-center group-hover:bg-teal transition-colors duration-300">

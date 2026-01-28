@@ -89,7 +89,7 @@ const Hero = () => {
                 href="/about"
                 className={`${glassButton} px-4 rounded-sm py-2 font-medium`}
               >
-                Learn More
+                Experience More
                 <ChevronRight className="h-6 w-6 ml-8" />
               </Link>
             </motion.div>
